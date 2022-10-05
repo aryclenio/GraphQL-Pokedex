@@ -1,3 +1,10 @@
+export type GetAllPokemonRequest =
+  {
+    __typename: string;
+    id: number;
+    name: string;
+  }[];
+
 export type PokemonRequest = {
   pokemon: {
     __typename: string;

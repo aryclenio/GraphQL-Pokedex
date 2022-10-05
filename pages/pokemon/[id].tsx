@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 import Image from "next/image";
-import client from "../../apollo-client";
+import { initializeApollo } from "../../lib/apolloClient";
 import { PokemonRequest } from "../../types/PokemonRequest";
 
 export default function Pokemon({ pokemon, sprite }: PokemonRequest) {
@@ -17,6 +17,7 @@ export default function Pokemon({ pokemon, sprite }: PokemonRequest) {
 
 export async function getServerSideProps({ params }: { params: { id: string } }) {
   const sprite = `https://raw.githubusercontent.com/geekygreek7/animated-pokemon-gifs/master/${params.id}.gif`
+  const client = initializeApollo();
 
   const { data } = await client.query({
     query: gql`
