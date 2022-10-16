@@ -26,8 +26,6 @@ const Home: NextPage<{ pokemons: GetAllPokemonRequest }> = ({ pokemons }) => {
 }
 
 export async function getStaticProps() {
-  const sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png`
-
   const client = initializeApollo();
 
   const { data } = await client.query({
