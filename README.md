@@ -1,3 +1,5 @@
+This project is a Pokedex, referindo to the device used on Pokemon Anime to read data about every species of pokemons. 
+2Tis project was made using the PokeAPI GraphQL integration and uses NextJS for SSG.
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
